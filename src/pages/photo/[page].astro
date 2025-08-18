@@ -1,0 +1,274 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import '../../styles/global.css';
+
+export async function getStaticPaths() {
+  // Get all photos from the archived directory
+  const photos = [
+    '/archived/_alpic2c_/1/106/18b359.jpeg',
+    '/archived/_alpic2c_/1/119/6b63e6.jpeg',
+    '/archived/_alpic2c_/1/41/9648a0.jpeg',
+    '/archived/_alpic2c_/1/446/172d72.jpeg',
+    '/archived/_alpic2c_/1/538/b45110.jpg',
+    '/archived/_alpic2c_/1/560/06b48f.jpeg',
+    '/archived/_alpic2c_/1/637/b4d2b2.jpeg',
+    '/archived/_alpic2c_/1/672/3f97b8.jpeg',
+    '/archived/_alpic2c_/1/882/bc3847.jpeg',
+    '/archived/_alpic2c_/1/892/6090b5.jpeg',
+    '/archived/_alpic2c_/1/917/09f975.jpeg',
+    '/archived/_alpic2c_/1/98/9440cc.jpeg',
+    '/archived/_alpic2c_/2/103/5a108a.jpeg',
+    '/archived/_alpic2c_/2/125/ac5e42.jpeg',
+    '/archived/_alpic2c_/2/170/a1b873.jpeg',
+    '/archived/_alpic2c_/2/216/2f8126.png',
+    '/archived/_alpic2c_/2/283/4f8233.jpeg',
+    '/archived/_alpic2c_/2/350/93575b.jpeg',
+    '/archived/_alpic2c_/2/442/9d7124.jpeg',
+    '/archived/_alpic2c_/2/63/94f558.jpeg',
+    '/archived/_alpic2c_/2/653/5913ca.jpeg',
+    '/archived/_alpic2c_/2/668/e9b7df.jpeg',
+    '/archived/_alpic2c_/2/690/cf37c0.jpeg',
+    '/archived/_alpic2c_/2/836/ac08c6.jpeg',
+    '/archived/_alpic2c_/2/907/bf33b2.jpeg',
+    '/archived/_alpic2c_/2/938/4e6e72.jpeg',
+    '/archived/_alpic2c_/2/966/bad887.jpeg',
+    '/archived/_alpic2c_/3/140/14e567.jpeg',
+    '/archived/_alpic2c_/3/194/307814.jpeg',
+    '/archived/_alpic2c_/3/247/2553a9.jpeg',
+    '/archived/_alpic2c_/3/345/0e4f3b.jpeg',
+    '/archived/_alpic2c_/3/349/6011cf.jpeg',
+    '/archived/_alpic2c_/3/378/9caaca.jpg',
+    '/archived/_alpic2c_/3/410/86438a.jpeg',
+    '/archived/_alpic2c_/3/417/9909b5.jpeg',
+    '/archived/_alpic2c_/3/421/425447.jpeg',
+    '/archived/_alpic2c_/3/432/214c40.jpeg',
+    '/archived/_alpic2c_/3/741/8c319f.jpeg',
+    '/archived/_alpic2c_/3/789/60f402.jpeg',
+    '/archived/_alpic2c_/3/819/dc5751.jpeg',
+    '/archived/_alpic2c_/3/926/8b0e7e.jpeg',
+    '/archived/_alpic2c_/4/130/adc0c7.jpeg',
+    '/archived/_alpic2c_/4/21/714c8f.jpeg',
+    '/archived/_alpic2c_/4/277/d612f6.jpg',
+    '/archived/_alpic2c_/4/29/d26ffc.jpeg',
+    '/archived/_alpic2c_/4/308/77615f.jpeg',
+    '/archived/_alpic2c_/4/31/86638b.png',
+    '/archived/_alpic2c_/4/342/4d2d8a.jpeg',
+    '/archived/_alpic2c_/4/373/ff8829.jpeg',
+    '/archived/_alpic2c_/4/472/73d340.jpeg',
+    '/archived/_alpic2c_/4/527/ed7ec2.jpeg',
+    '/archived/_alpic2c_/4/567/eb8199.jpeg',
+    '/archived/_alpic2c_/4/728/09d221.jpeg',
+    '/archived/_alpic2c_/4/738/79a030.jpeg',
+    '/archived/_alpic2c_/4/792/66c385.jpeg',
+    '/archived/_alpic2c_/4/829/69aa18.jpeg',
+    '/archived/_alpic2c_/4/975/6baac9.jpeg',
+    '/archived/_alpic2c_/5/150/2074d0.jpeg',
+    '/archived/_alpic2c_/5/25/5bf9af.jpeg',
+    '/archived/_alpic2c_/5/277/37b616.jpeg',
+    '/archived/_alpic2c_/5/418/5201d9.jpeg',
+    '/archived/_alpic2c_/5/467/c69925.jpeg',
+    '/archived/_alpic2c_/5/50/c77dee.jpeg',
+    '/archived/_alpic2c_/5/672/d9a9fc.jpeg',
+    '/archived/_alpic2c_/5/677/012c9e.jpeg'
+  ];
+
+  const PHOTOS_PER_PAGE = 10;
+  const totalPages = Math.ceil(photos.length / PHOTOS_PER_PAGE);
+
+  return Array.from({ length: totalPages }).map((_, index) => {
+    const page = index + 1;
+    const start = index * PHOTOS_PER_PAGE;
+    const end = start + PHOTOS_PER_PAGE;
+    
+    return {
+      params: { page: page.toString() },
+      props: {
+        photos: photos.slice(start, end),
+        currentPage: page,
+        totalPages,
+        totalPhotos: photos.length
+      }
+    };
+  });
+}
+
+const { photos, currentPage, totalPages, totalPhotos } = Astro.props;
+---
+
+<BaseLayout title={`PHOTO - ページ ${currentPage} - 旭丘軽音楽部`}>
+  <main class="main-content">
+    <div class="photo-header">
+      <img src="/archived/_ppic_/301/366e39.jpg" alt="Header image" />
+      <div class="photo-title">p a c h i</div>
+    </div>
+    
+    <div class="photo-gallery">
+      <h2>フォトギャラリー</h2>
+      <div class="photo-grid">
+        {photos.map((photo, index) => (
+          <a href={photo} target="_blank" class="photo-item">
+            <img src={photo} alt={`Photo ${(currentPage - 1) * 10 + index + 1}`} />
+          </a>
+        ))}
+      </div>
+      
+      <div class="pagination">
+        <p class="photo-count">{currentPage}/{totalPages}ページ (全{totalPhotos}枚)</p>
+        <div class="page-navigation">
+          {currentPage > 1 && (
+            <a href={`/photo/${currentPage - 1}`} class="page-link">← 前のページ</a>
+          )}
+          
+          <div class="page-numbers">
+            {Array.from({ length: totalPages }).map((_, i) => {
+              const page = i + 1;
+              return (
+                <a 
+                  href={`/photo/${page}`} 
+                  class={`page-number ${page === currentPage ? 'active' : ''}`}
+                >
+                  {page}
+                </a>
+              );
+            })}
+          </div>
+          
+          {currentPage < totalPages && (
+            <a href={`/photo/${currentPage + 1}`} class="page-link">次のページ →</a>
+          )}
+        </div>
+      </div>
+    </div>
+    
+    <nav class="navigation">
+      <a href="/">ホームに戻る</a>
+    </nav>
+  </main>
+</BaseLayout>
+
+<style>
+  .photo-header {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .photo-header img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  .photo-title {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    color: #cc9999;
+    text-align: right;
+    padding-right: 2rem;
+  }
+  
+  .photo-gallery {
+    padding: 2rem;
+    background: #fffef9;
+    border-radius: 8px;
+    margin: 2rem 0;
+  }
+  
+  .photo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 1rem;
+    margin: 2rem 0;
+  }
+  
+  .photo-item img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 4px;
+    transition: transform 0.2s;
+  }
+  
+  .photo-item:hover img {
+    transform: scale(1.05);
+  }
+  
+  .pagination {
+    margin-top: 2rem;
+  }
+  
+  .photo-count {
+    text-align: center;
+    color: #666;
+    margin-bottom: 1rem;
+  }
+  
+  .page-navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  
+  .page-numbers {
+    display: flex;
+    gap: 0.5rem;
+  }
+  
+  .page-number {
+    padding: 0.4rem 0.8rem;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    text-decoration: none;
+    color: #333;
+    transition: background 0.2s;
+  }
+  
+  .page-number:hover {
+    background: #ff8c94;
+    color: white;
+  }
+  
+  .page-number.active {
+    background: #ff8c94;
+    color: white;
+    font-weight: bold;
+  }
+  
+  .page-link {
+    padding: 0.5rem 1rem;
+    background: #fff;
+    border: 1px solid #ff8c94;
+    border-radius: 20px;
+    text-decoration: none;
+    color: #ff8c94;
+    transition: all 0.2s;
+  }
+  
+  .page-link:hover {
+    background: #ff8c94;
+    color: white;
+  }
+  
+  .navigation {
+    margin-top: 2rem;
+    text-align: center;
+  }
+  
+  .navigation a {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    background: #fff;
+    color: #333;
+    text-decoration: none;
+    border: 2px solid #ff8c94;
+    border-radius: 25px;
+    transition: all 0.3s;
+  }
+  
+  .navigation a:hover {
+    background: #ff8c94;
+    color: white;
+  }
+</style>

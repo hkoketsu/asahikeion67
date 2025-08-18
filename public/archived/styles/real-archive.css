@@ -1,0 +1,106 @@
+/* Original styles from the archived real pages */
+body {
+  font-family: "Verdana", "メイリオ", "ＭＳＰゴシック";
+  font-size: 65%;
+  line-height: 2em;
+  background: #FFFFFF;
+  color: #000000;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:link, a:visited {
+  color: black;
+}
+
+/* Entry styling based on original */
+.entry-container {
+  margin-left: 30px;
+  margin-bottom: 20px;
+}
+
+.entry-header {
+  border-bottom: dotted #c0c6c9 1px;
+  padding-bottom: 2px;
+}
+
+.entry-title {
+  font-size: 0.8em;
+}
+
+.entry-date {
+  font-size: 0.8em;
+  color: #666;
+}
+
+.entry-author {
+  font-size: 1em;
+  color: #a22041;
+}
+
+.entry-content {
+  margin-left: 30px;
+  font-size: 0.8em;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.entry-footer {
+  text-align: right;
+  margin-right: 10px;
+  font-size: 0.8em;
+}
+
+.entry-footer a {
+  color: #000000;
+}
+
+/* Navigation */
+.nav-container {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.nav-container a {
+  margin: 0 10px;
+  color: #000;
+}
+
+/* Horizontal rules like original */
+hr {
+  color: #FFFFFF;
+  width: 90%;
+  margin: 20px auto;
+}
+
+/* Form styling */
+.post-form {
+  margin: 20px 30px;
+  padding: 15px;
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+}
+
+.post-form input[type="text"],
+.post-form textarea,
+.post-form select {
+  color: #555555;
+  font-size: 90%;
+  background-color: #ffffff;
+  border: solid #dddddd 1px;
+  font-family: "Verdana", "メイリオ", "ＭＳＰゴシック";
+  margin: 5px 0;
+}
+
+.post-form textarea {
+  width: 200px;
+  height: 60px;
+}
+
+/* Special birthday message style */
+.birthday-message {
+  font-size: 2em !important;
+  color: #FFC0CB !important;
+}

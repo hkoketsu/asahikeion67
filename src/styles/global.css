@@ -1,0 +1,144 @@
+/* Global Styles */
+:root {
+  --color-primary: #FF1493;
+  --color-primary-light: #FFB9F4;
+  --color-text: #000000;
+  --color-background: #FFFFFF;
+  --color-link: #0066cc;
+  --color-accent-red: #ff0000;
+  --color-accent-blue: #0000ff;
+  --color-accent-yellow: #ffff00;
+  --max-width: 1200px;
+  --spacing-unit: 1rem;
+}
+
+/* Reset and Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--color-text);
+  background-color: var(--color-background);
+}
+
+body {
+  min-height: 100vh;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: var(--spacing-unit);
+  line-height: 1.2;
+}
+
+p {
+  margin-bottom: var(--spacing-unit);
+}
+
+a {
+  color: var(--color-link);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Layout */
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--spacing-unit);
+}
+
+/* Main Content */
+.main-content {
+  text-align: center;
+  padding: calc(var(--spacing-unit) * 2);
+}
+
+.site-title {
+  font-size: 0.875rem;
+  margin-bottom: var(--spacing-unit);
+}
+
+.hero-image {
+  max-width: 100%;
+  height: auto;
+  margin: calc(var(--spacing-unit) * 2) 0;
+}
+
+.decorative-images {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  margin: var(--spacing-unit) 0;
+}
+
+.decorative-images img {
+  max-height: 26px;
+  width: auto;
+}
+
+/* Navigation Menu */
+.nav-menu {
+  margin: calc(var(--spacing-unit) * 2) 0;
+}
+
+.nav-item {
+  display: block;
+  margin: var(--spacing-unit) 0;
+  font-size: 0.875rem;
+}
+
+.nav-item a {
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+}
+
+.nav-item.profile a { color: var(--color-text); }
+.nav-item.diary a { color: var(--color-accent-blue); }
+.nav-item.real a { color: var(--color-accent-red); }
+.nav-item.photo a { color: var(--color-text); }
+.nav-item.song a { color: var(--color-text); }
+.nav-item.link a { color: var(--color-accent-yellow); }
+
+/* Footer */
+.site-footer {
+  text-align: center;
+  padding: calc(var(--spacing-unit) * 2);
+  font-size: 0.875rem;
+}
+
+.edit-link {
+  text-align: right;
+  margin: var(--spacing-unit) 0;
+  font-size: 0.875rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 769px) {
+  .nav-menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: calc(var(--spacing-unit) * 2);
+  }
+  
+  .nav-item {
+    margin: 0;
+  }
+}
