@@ -1,7 +1,7 @@
 ---
-// Redirect to the actual archived page
+const base = import.meta.env.BASE_URL || '';
 ---
 
-<script>
-  window.location.href = "/archived/html/real/asahi67keion-118195-rl.php-guid=on.html";
+<script define:vars={{ base }}>
+  window.location.href = `${base}archived/html/real/asahi67keion-118195-rl.php-guid=on.html`;
 </script>

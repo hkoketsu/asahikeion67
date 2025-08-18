@@ -1,35 +1,38 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import '../styles/global.css';
+import { getAssetPath } from '../utils/paths.js';
+const base = import.meta.env.BASE_URL || '';
 ---
+
 
 <BaseLayout title="LINK - 旭丘軽音楽部">
   <main class="main-content">
     <div class="link-header">
-      <img src="/archived/_ppic_/275/9947f7.jpg" alt="LINK" class="link-logo" />
-      <img src="/archived/_ppic_/870/51f659.gif" alt="装飾" class="link-decoration" />
+      <img src={getAssetPath("/archived/_ppic_/275/9947f7.jpg")} alt="LINK" class="link-logo" />
+      <img src={getAssetPath("/archived/_ppic_/870/51f659.gif")} alt="装飾" class="link-decoration" />
     </div>
     
     <div class="link-content">
       <div class="link-section">
         <div class="links">
           <a href="http://22.xmbs.jp/asahi66keion/?guid=on" class="link-item" target="_blank">
-            <img src="/archived/_ppic_/220/ae2b70.gif" alt="リンクアイコン" class="link-icon" />
+            <img src={getAssetPath("/archived/_ppic_/220/ae2b70.gif")} alt="リンクアイコン" class="link-icon" />
             <span class="link-text">ろくろく軽音部</span>
           </a>
           
           <a href="http://70.xmbs.jp/asahi65keion/?guid=on" class="link-item" target="_blank">
-            <img src="/archived/_ppic_/220/ae2b70.gif" alt="リンクアイコン" class="link-icon" />
+            <img src={getAssetPath("/archived/_ppic_/220/ae2b70.gif")} alt="リンクアイコン" class="link-icon" />
             <span class="link-text">ろくご軽音部</span>
           </a>
           
           <a href="http://26.xmbs.jp/asahikeion68/" class="link-item" target="_blank">
-            <img src="/archived/_ppic_/220/ae2b70.gif" alt="リンクアイコン" class="link-icon" />
+            <img src={getAssetPath("/archived/_ppic_/220/ae2b70.gif")} alt="リンクアイコン" class="link-icon" />
             <span class="link-text">ろくはち軽音部</span>
           </a>
           
           <a href="http://17.xmbs.jp/asahi67hand/" class="link-item" target="_blank">
-            <img src="/archived/_ppic_/220/ae2b70.gif" alt="リンクアイコン" class="link-icon" />
+            <img src={getAssetPath("/archived/_ppic_/220/ae2b70.gif")} alt="リンクアイコン" class="link-icon" />
             <span class="link-text">ろくなな演劇部</span>
           </a>
         </div>
@@ -47,7 +50,7 @@ import '../styles/global.css';
     </div>
     
     <nav class="navigation">
-      <a href="/">ホームに戻る</a>
+      <a href={`${base}`}>ホームに戻る</a>
     </nav>
   </main>
 </BaseLayout>
