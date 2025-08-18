@@ -1,0 +1,159 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import '../styles/global.css';
+---
+
+<BaseLayout title="LINK - 旭部軽音楽部">
+  <main class="main-content">
+    <h1>LINK</h1>
+    
+    <div class="link-content">
+      <h2>リンク集</h2>
+      
+      <div class="link-section">
+        <h3>バンド関連</h3>
+        <div class="links">
+          <a href="#" class="link-item">
+            <span class="link-icon">🎸</span>
+            <span class="link-text">バンドメンバーのブログ</span>
+          </a>
+          <a href="#" class="link-item">
+            <span class="link-icon">🎵</span>
+            <span class="link-text">音楽活動記録</span>
+          </a>
+        </div>
+      </div>
+      
+      <div class="link-section">
+        <h3>SNS</h3>
+        <div class="links">
+          <a href="#" class="link-item">
+            <span class="link-icon">📱</span>
+            <span class="link-text">Twitter</span>
+          </a>
+          <a href="#" class="link-item">
+            <span class="link-icon">📷</span>
+            <span class="link-text">Instagram</span>
+          </a>
+        </div>
+      </div>
+      
+      <div class="link-section">
+        <h3>その他</h3>
+        <div class="links">
+          <a href="#" class="link-item">
+            <span class="link-icon">🏫</span>
+            <span class="link-text">学校公式サイト</span>
+          </a>
+          <a href="#" class="link-item">
+            <span class="link-icon">🎼</span>
+            <span class="link-text">軽音楽部公式</span>
+          </a>
+        </div>
+      </div>
+    </div>
+    
+    <nav class="navigation">
+      <a href="/">ホームに戻る</a>
+    </nav>
+  </main>
+</BaseLayout>
+
+<style>
+  h1 {
+    text-align: center;
+    color: #ffd700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    margin-bottom: 2rem;
+  }
+  
+  .link-content {
+    padding: 2rem;
+    background: #fffee0;
+    border-radius: 8px;
+    margin: 2rem 0;
+  }
+  
+  .link-content h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #ffd700;
+  }
+  
+  .link-section {
+    margin: 2rem 0;
+  }
+  
+  .link-section h3 {
+    color: #666;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    padding-left: 1rem;
+    border-left: 4px solid #ffd700;
+  }
+  
+  .links {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  
+  .link-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background: white;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #333;
+    transition: all 0.3s;
+  }
+  
+  .link-item:hover {
+    background: #fff8dc;
+    border-color: #ffd700;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .link-icon {
+    font-size: 1.5rem;
+  }
+  
+  .link-text {
+    flex: 1;
+    font-size: 1rem;
+  }
+  
+  .navigation {
+    margin-top: 2rem;
+    text-align: center;
+  }
+  
+  .navigation a {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    background: #fff;
+    color: #333;
+    text-decoration: none;
+    border: 2px solid #ffd700;
+    border-radius: 25px;
+    transition: all 0.3s;
+  }
+  
+  .navigation a:hover {
+    background: #ffd700;
+    color: #333;
+  }
+  
+  @media (max-width: 768px) {
+    .links {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

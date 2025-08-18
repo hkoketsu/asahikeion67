@@ -1,0 +1,230 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import '../styles/global.css';
+---
+
+<BaseLayout title="SONG - 旭部軽音楽部">
+  <main class="main-content">
+    <h1>GARNET BULLET - Song</h1>
+    
+    <div class="song-list">
+      <h2>演奏曲リスト</h2>
+      
+      <div class="songs">
+        <div class="song-item">
+          <span class="song-number">[01]</span>
+          <a href="#" class="song-link">君に願いを / flumpool</a>
+        </div>
+        
+        <div class="song-item">
+          <span class="song-number">[02]</span>
+          <a href="#" class="song-link">軌跡の夕べ / THEATRE BROOK</a>
+        </div>
+        
+        <div class="song-item">
+          <span class="song-number">[03]</span>
+          <a href="#" class="song-link">HONEY / L'Arc〜en〜Ciel</a>
+        </div>
+        
+        <div class="song-item">
+          <span class="song-number">[04]</span>
+          <a href="#" class="song-link">CROSS GAME / アリス九號.</a>
+        </div>
+        
+        <div class="song-item">
+          <span class="song-number">[05]</span>
+          <a href="#" class="song-link">青空 / Galileo Galilei</a>
+        </div>
+        
+        <div class="song-item">
+          <span class="song-number">[06]</span>
+          <a href="#" class="song-link">DON'T CALL ME CRAZY / ポルノグラフィティ</a>
+        </div>
+        
+        <div class="song-item">
+          <span class="song-number">[07]</span>
+          <a href="#" class="song-link">恋歌 / ONE OK ROCK</a>
+        </div>
+        
+        <div class="song-item">
+          <span class="song-number">[08]</span>
+          <a href="#" class="song-link">D-tecnoLife / UVERworld</a>
+        </div>
+        
+        <div class="song-item">
+          <span class="song-number">[09]</span>
+          <a href="#" class="song-link">GO-ON / UVERworld</a>
+        </div>
+        
+        <div class="song-item">
+          <span class="song-number">[10]</span>
+          <a href="#" class="song-link">マニフェスト / RADWIMPS</a>
+        </div>
+        
+        <div class="song-item">
+          <span class="song-number">[11]</span>
+          <a href="#" class="song-link">Space Sonic / ELLEGARDEN</a>
+        </div>
+        
+        <div class="song-item">
+          <span class="song-number">[12]</span>
+          <a href="#" class="song-link">ホログラム / NICO Touches the Walls</a>
+        </div>
+        
+        <div class="song-item">
+          <span class="song-number">[13]</span>
+          <a href="#" class="song-link">Have a Nice Day / Bon Jovi</a>
+        </div>
+        
+        <div class="song-item">
+          <span class="song-number">[14]</span>
+          <a href="#" class="song-link">20+∞century boy / Acid Black Cherry</a>
+        </div>
+        
+        <div class="song-item">
+          <span class="song-number">[15]</span>
+          <a href="#" class="song-link">ホリデイ / BUMP OF CHICKEN</a>
+        </div>
+        
+        <div class="song-item">
+          <span class="song-number">[16]</span>
+          <a href="#" class="song-link">Around the clock / Nothing's carved in stone</a>
+        </div>
+        
+        <div class="song-item">
+          <span class="song-number">[17]</span>
+          <a href="#" class="song-link">JEWELS / アリス九號.</a>
+        </div>
+        
+        <div class="song-item">
+          <span class="song-number">[18]</span>
+          <a href="#" class="song-link">SHAMROCK / UVERworld</a>
+        </div>
+        
+        <div class="song-item">
+          <span class="song-number">[19]</span>
+          <a href="#" class="song-link">戦う君よ / THE BACK HORN</a>
+        </div>
+        
+        <div class="song-item">
+          <span class="song-number">[20]</span>
+          <a href="#" class="song-link">キャンドルの灯を / 9mm Parabellum Bullet</a>
+        </div>
+      </div>
+      
+      <p class="song-pages">ページ: 1-20 | <a href="#">21-40</a></p>
+    </div>
+    
+    <nav class="navigation">
+      <a href="/">ホームに戻る</a>
+    </nav>
+  </main>
+</BaseLayout>
+
+<style>
+  h1 {
+    text-align: center;
+    color: #ff0000;
+    background: #000;
+    padding: 1rem;
+    margin: -2rem -2rem 2rem -2rem;
+    font-family: 'Impact', sans-serif;
+    letter-spacing: 2px;
+  }
+  
+  .song-list {
+    background: #000;
+    color: #ff0000;
+    padding: 2rem;
+    border-radius: 8px;
+    margin: 2rem 0;
+  }
+  
+  .song-list h2 {
+    text-align: center;
+    color: #fff;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #ff0000;
+  }
+  
+  .songs {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .song-item {
+    display: flex;
+    align-items: center;
+    padding: 0.8rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 4px;
+    transition: all 0.2s;
+  }
+  
+  .song-item:hover {
+    background: rgba(255, 0, 0, 0.1);
+    transform: translateX(5px);
+  }
+  
+  .song-number {
+    color: #ff0033;
+    font-weight: bold;
+    margin-right: 1rem;
+    font-family: monospace;
+    min-width: 40px;
+  }
+  
+  .song-link {
+    color: #ffffff;
+    text-decoration: none;
+    flex: 1;
+  }
+  
+  .song-link:hover {
+    color: #ff0033;
+    text-decoration: underline;
+  }
+  
+  .song-pages {
+    text-align: center;
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid #ff0000;
+    color: #fff;
+  }
+  
+  .song-pages a {
+    color: #ff0033;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border: 1px solid #ff0033;
+    border-radius: 4px;
+    margin-left: 1rem;
+  }
+  
+  .song-pages a:hover {
+    background: #ff0033;
+    color: #000;
+  }
+  
+  .navigation {
+    margin-top: 2rem;
+    text-align: center;
+  }
+  
+  .navigation a {
+    color: #666;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    display: inline-block;
+  }
+  
+  .navigation a:hover {
+    background: #f0f0f0;
+    border-color: #999;
+  }
+</style>
