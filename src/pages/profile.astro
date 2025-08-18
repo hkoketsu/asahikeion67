@@ -1,7 +1,10 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import '../styles/global.css';
+import { getAssetPath } from '../utils/paths.js';
+const base = import.meta.env.BASE_URL || '';
 ---
+
 
 <BaseLayout title="PROFILE - 旭丘軽音楽部">
   <main class="main-content">
@@ -9,51 +12,51 @@ import '../styles/global.css';
     
     <div class="profiles-container">
       <div class="profile-group">
-        <img src="/images/491/b3243f.jpg" alt="GARNET BULLET" class="group-image" />
+        <img src={getAssetPath("/images/491/b3243f.jpg")} alt="GARNET BULLET" class="group-image" />
         <div class="members">
-          <a href="/archived/html/misc/asahi67keion-94856-pr.php-guid=on.html" class="member-link">なおやん</a>
-          <a href="/archived/html/misc/asahi67keion-94857-pr.php-guid=on.html" class="member-link">ちゃらさん</a>
-          <a href="/archived/html/misc/asahi67keion-97236-pr.php-guid=on.html" class="member-link">はましゅう</a>
-          <a href="/archived/html/misc/asahi67keion-94859-pr.php-guid=on.html" class="member-link">うにちゃき</a>
-          <a href="/archived/html/misc/asahi67keion-94860-pr.php-guid=on.html" class="member-link">ギャルベー</a>
+          <a href={`${base}archived/html/misc/asahi67keion-94856-pr.php-guid=on.html`} class="member-link">なおやん</a>
+          <a href={`${base}archived/html/misc/asahi67keion-94857-pr.php-guid=on.html`} class="member-link">ちゃらさん</a>
+          <a href={`${base}archived/html/misc/asahi67keion-97236-pr.php-guid=on.html`} class="member-link">はましゅう</a>
+          <a href={`${base}archived/html/misc/asahi67keion-94859-pr.php-guid=on.html`} class="member-link">うにちゃき</a>
+          <a href={`${base}archived/html/misc/asahi67keion-94860-pr.php-guid=on.html`} class="member-link">ギャルベー</a>
         </div>
       </div>
       
       <div class="profile-group">
-        <img src="/images/696/a1a09d.jpg" alt="Bleistift" class="group-image" />
+        <img src={getAssetPath("/images/696/a1a09d.jpg")} alt="Bleistift" class="group-image" />
         <div class="members">
-          <a href="/archived/html/misc/asahi67keion-94861-pr.php-guid=on.html" class="member-link">ざっきー</a>
-          <a href="/archived/html/misc/asahi67keion-94862-pr.php-guid=on.html" class="member-link">あっちー</a>
-          <a href="/archived/html/misc/asahi67keion-94863-pr.php-guid=on.html" class="member-link">ぐっちー</a>
-          <a href="/archived/html/misc/asahi67keion-94864-pr.php-guid=on.html" class="member-link">きっしー</a>
+          <a href={`${base}archived/html/misc/asahi67keion-94861-pr.php-guid=on.html`} class="member-link">ざっきー</a>
+          <a href={`${base}archived/html/misc/asahi67keion-94862-pr.php-guid=on.html`} class="member-link">あっちー</a>
+          <a href={`${base}archived/html/misc/asahi67keion-94863-pr.php-guid=on.html`} class="member-link">ぐっちー</a>
+          <a href={`${base}archived/html/misc/asahi67keion-94864-pr.php-guid=on.html`} class="member-link">きっしー</a>
         </div>
       </div>
       
       <div class="profile-group">
-        <img src="/images/171/19249d.jpg" alt="Asterism" class="group-image" />
+        <img src={getAssetPath("/images/171/19249d.jpg")} alt="Asterism" class="group-image" />
         <div class="members">
-          <a href="/archived/html/misc/asahi67keion-94865-pr.php-guid=on.html" class="member-link">もねもね</a>
-          <a href="/archived/html/misc/asahi67keion-94866-pr.php-guid=on.html" class="member-link">えりかさま</a>
+          <a href={`${base}archived/html/misc/asahi67keion-94865-pr.php-guid=on.html`} class="member-link">もねもね</a>
+          <a href={`${base}archived/html/misc/asahi67keion-94866-pr.php-guid=on.html`} class="member-link">えりかさま</a>
           <a href="http://twpf.jp/home/jump?p=http%253A%252F%252Ftwpf.jp%252F__shioo" target="_blank" class="member-link">しお</a>
-          <a href="/archived/html/misc/asahi67keion-94868-pr.php-guid=on.html" class="member-link">かたぴー</a>
-          <a href="/archived/html/misc/asahi67keion-94869-pr.php-guid=on.html" class="member-link">さくら</a>
+          <a href={`${base}archived/html/misc/asahi67keion-94868-pr.php-guid=on.html`} class="member-link">かたぴー</a>
+          <a href={`${base}archived/html/misc/asahi67keion-94869-pr.php-guid=on.html`} class="member-link">さくら</a>
         </div>
       </div>
       
       <div class="profile-group">
-        <img src="/images/465/0cdeaa.jpg" alt="L'Eclipse" class="group-image" />
+        <img src={getAssetPath("/images/465/0cdeaa.jpg")} alt="L'Eclipse" class="group-image" />
         <div class="members">
-          <a href="/archived/html/misc/asahi67keion-94870-pr.php-guid=on.html" class="member-link">課長</a>
-          <a href="/archived/html/misc/asahi67keion-94871-pr.php-guid=on.html" class="member-link">ニム犬</a>
-          <a href="/archived/html/misc/asahi67keion-94872-pr.php-guid=on.html" class="member-link">りょうと</a>
-          <a href="/archived/html/misc/asahi67keion-94873-pr.php-guid=on.html" class="member-link">みやこじま</a>
-          <a href="/archived/html/misc/asahi67keion-96296-pr.php-guid=on.html" class="member-link">めいとぅん</a>
+          <a href={`${base}archived/html/misc/asahi67keion-94870-pr.php-guid=on.html`} class="member-link">課長</a>
+          <a href={`${base}archived/html/misc/asahi67keion-94871-pr.php-guid=on.html`} class="member-link">ニム犬</a>
+          <a href={`${base}archived/html/misc/asahi67keion-94872-pr.php-guid=on.html`} class="member-link">りょうと</a>
+          <a href={`${base}archived/html/misc/asahi67keion-94873-pr.php-guid=on.html`} class="member-link">みやこじま</a>
+          <a href={`${base}archived/html/misc/asahi67keion-96296-pr.php-guid=on.html`} class="member-link">めいとぅん</a>
         </div>
       </div>
     </div>
     
     <nav class="navigation">
-      <a href="/">ホームに戻る</a>
+      <a href={`${base}`}>ホームに戻る</a>
     </nav>
   </main>
 </BaseLayout>

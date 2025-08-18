@@ -1,6 +1,8 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import '../../styles/global.css';
+import { getAssetPath } from '../../utils/paths.js';
+const base = import.meta.env.BASE_URL || '';
 
 export async function getStaticPaths() {
   // Get all photos from the archived directory
@@ -95,10 +97,11 @@ export async function getStaticPaths() {
 const { photos, currentPage, totalPages, totalPhotos } = Astro.props;
 ---
 
+
 <BaseLayout title={`PHOTO - ページ ${currentPage} - 旭丘軽音楽部`}>
   <main class="main-content">
     <div class="photo-header">
-      <img src="/archived/_ppic_/301/366e39.jpg" alt="Header image" />
+      <img src={getAssetPath("/archived/_ppic_/301/366e39.jpg")} alt="Header image" />
       <div class="photo-title">p a c h i</div>
     </div>
     
@@ -116,7 +119,7 @@ const { photos, currentPage, totalPages, totalPhotos } = Astro.props;
         <p class="photo-count">{currentPage}/{totalPages}ページ (全{totalPhotos}枚)</p>
         <div class="page-navigation">
           {currentPage > 1 && (
-            <a href={`/photo/${currentPage - 1}`} class="page-link">← 前のページ</a>
+            <a href={`${base}photo/${currentPage - 1}`} class="page-link">← 前のページ</a>
           )}
           
           <div class="page-numbers">
@@ -124,7 +127,7 @@ const { photos, currentPage, totalPages, totalPhotos } = Astro.props;
               const page = i + 1;
               return (
                 <a 
-                  href={`/photo/${page}`} 
+                  href={`${base}photo/${page}`} 
                   class={`page-number ${page === currentPage ? 'active' : ''}`}
                 >
                   {page}
@@ -134,14 +137,14 @@ const { photos, currentPage, totalPages, totalPhotos } = Astro.props;
           </div>
           
           {currentPage < totalPages && (
-            <a href={`/photo/${currentPage + 1}`} class="page-link">次のページ →</a>
+            <a href={`${base}photo/${currentPage + 1}`} class="page-link">次のページ →</a>
           )}
         </div>
       </div>
     </div>
     
     <nav class="navigation">
-      <a href="/">ホームに戻る</a>
+      <a href={`${base}`}>ホームに戻る</a>
     </nav>
   </main>
 </BaseLayout>
