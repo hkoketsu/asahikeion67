@@ -2,7 +2,7 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import '../../styles/global.css';
 import { getAssetPath } from '../../utils/paths.js';
-const base = import.meta.env.BASE_URL || '';
+const base = import.meta.env.BASE_URL || '/';
 
 export async function getStaticPaths() {
   // Get all photos from the archived directory

@@ -5,7 +5,7 @@ import { defineConfig } from 'astro/config';
 export default defineConfig({
   // GitHub Pages deployment configuration
   site: 'https://hkoketsu.github.io',
-  base: '/asahikeion67',
+  base: '/asahikeion67/',
   
   // Build configuration
   build: {
