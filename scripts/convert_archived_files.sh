@@ -101,6 +101,13 @@ process_html_files \
     "$PUBLIC_DIR/html/photo" \
     "*.html"
 
+# Process real archive pages
+echo "Converting real archive pages..."
+process_html_files \
+    "$ARCHIVED_DIR/html/real" \
+    "$PUBLIC_DIR/html/real" \
+    "*.html"
+
 # Copy image directories if they don't exist in public
 echo "Copying image directories..."
 for img_dir in "_ppic_" "_upimg_" "_alpic2c_"; do

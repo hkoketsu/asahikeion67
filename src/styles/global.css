@@ -57,27 +57,6 @@ a:hover {
   padding: 0 var(--spacing-unit);
 }
 
-/* Service Notice Box */
-.service-notice {
-  background-color: var(--color-primary);
-  margin: calc(var(--spacing-unit) * 2) auto;
-  max-width: 75%;
-  border-radius: 4px;
-  overflow: hidden;
-}
-
-.service-notice-content {
-  background-color: var(--color-primary-light);
-  padding: calc(var(--spacing-unit) * 2);
-  text-align: center;
-}
-
-.service-notice-title {
-  color: var(--color-accent-red);
-  font-weight: bold;
-  margin-bottom: var(--spacing-unit);
-}
-
 /* Main Content */
 .main-content {
   text-align: center;
@@ -146,10 +125,6 @@ a:hover {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-  .service-notice {
-    max-width: 90%;
-  }
-  
   html {
     font-size: 14px;
   }
